@@ -7,8 +7,7 @@ from langchain.docstore.document import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings 
 from langchain_community.vectorstores.upstash import UpstashVectorStore
-from extraction import extract_papers
-from src.prompts.rag_prompt import RAG_PROMPT_TEMPLATE
+from .extraction import extract_papers
 
 
 @click.command()
