@@ -5,9 +5,10 @@ from dotenv import load_dotenv
 print(f"Current working directory: {os.getcwd()}")
 from langchain.docstore.document import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings 
 from langchain_community.vectorstores.upstash import UpstashVectorStore
-from extract import extract_papers
+from extraction import extract_papers
+from src.prompts.rag_prompt import RAG_PROMPT_TEMPLATE
 
 
 @click.command()

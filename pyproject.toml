@@ -1,7 +1,11 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "rag-chatbot"
 version = "0.1.0"
-description = "RAG chatbot for scientific papers"
+description = "RAG Chatbot for paper extraction and indexing"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -17,3 +21,6 @@ dependencies = [
     "tqdm>=4.67.1",
     "upstash-vector>=0.8.0",
 ]
+
+[tool.setuptools]
+packages = ["src"]
