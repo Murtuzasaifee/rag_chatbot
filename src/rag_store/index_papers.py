@@ -7,7 +7,20 @@ from langchain.docstore.document import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings 
 from langchain_community.vectorstores.upstash import UpstashVectorStore
-from .extraction import extract_papers
+import sys
+
+# Handle imports for both src/ and root directory usage
+try:
+    from extraction import extract_papers
+except ImportError:
+    # If running from src/ directory, try parent directory
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    try:
+       from extraction import extract_papers
+    except ImportError:
+        print(f"Exception in import")
+        
+
 
 
 @click.command()
