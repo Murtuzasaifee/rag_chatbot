@@ -63,7 +63,7 @@ def test_rag_ingestion(query, max_papers, batch_size, max_chunks, embedding_mode
     if not splits:
         return
     
-    create_embeddings(batch_size=batch_size,embedding_model=embedding_model)
+    create_embeddings(batch_size=batch_size,splits=splits,embedding_model=embedding_model)
     
 
 

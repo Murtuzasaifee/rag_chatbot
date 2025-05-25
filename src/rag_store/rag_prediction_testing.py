@@ -3,7 +3,7 @@ import sys
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_community.vectorstores.upstash import UpstashVectorStore
-from rag import RAG
+from src.rag_store.prediction import RAG
 
 
 # Functions for terminal testing
