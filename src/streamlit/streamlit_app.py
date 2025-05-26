@@ -177,7 +177,7 @@ def load_streamlit_app():
         st.markdown("""
         1. **Index Papers**: Run the indexing script first
         ```bash
-            python src/rag_store/rag_ingestion_testing.py test-full-ingestion --query "YOUR_TOPIC" --max_papers 20
+            python src/rag_store/index_papers.py index-papers --query "Attention Mechanism" --max_papers 20
         ```
         
         2. **Required Environment Variables**:
